@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>CEA101G5</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <resource-ref>
+		<description>DB Connection</description>
+		<res-ref-name>jdbc/CEA101G5</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<servlet>
+		<servlet-name>MemServlet</servlet-name>
+		<servlet-class>com.member.controller.MemServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemServlet</servlet-name>
+		<url-pattern>/back-end/member/mem.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>MemPhotoReader</servlet-name>
+		<servlet-class>com.member.controller.MemPhotoReader</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MemPhotoReader</servlet-name>
+		<url-pattern>/back-end/member/memPhotoReader.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RestaurantServlet</servlet-name>
+		<servlet-class>com.restaurant.controller.RestaurantServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RestaurantServlet</servlet-name>
+		<url-pattern>/back-end/restaurant/restaurant.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>RestaurantPictureServlet</servlet-name>
+		<servlet-class>com.restaurantpicture.controller.RestaurantPictureServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RestaurantPictureServlet</servlet-name>
+		<url-pattern>/back-end/restaurantpicture/restaurantPicture.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>EmpServlet</servlet-name>
+		<servlet-class>com.emp.controller.EmpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmpServlet</servlet-name>
+		<url-pattern>/back-end/emp/emp.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EmpAuthCategoryServlet</servlet-name>
+		<servlet-class>com.empauthcategory.controller.EmpAuthCategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmpAuthCategoryServlet</servlet-name>
+		<url-pattern>/back-end/empauthcategory/empac.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EmpAuthServlet</servlet-name>
+		<servlet-class>com.empauth.controller.EmpAuthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmpAuthServlet</servlet-name>
+		<url-pattern>/back-end/empauth/ea.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>MenuReportServlet</servlet-name>
+		<servlet-class>com.menureport.controller.MenuReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MenuReportServlet</servlet-name>
+		<url-pattern>/back-end/menureport/mr.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>StoreCmtReportServlet</servlet-name>
+		<servlet-class>com.storecmtreport.controller.StoreCmtReportServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StoreCmtReportServlet</servlet-name>
+		<url-pattern>/back-end/storecmtreport/scr.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StoreCharDetailServlet</servlet-name>
+		<servlet-class>com.storechardetail.controller.StoreCharDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StoreCharDetailServlet</servlet-name>
+		<url-pattern>/back-end/storeChar/storeChar.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>AcceptReserveServlet</servlet-name>
+		<servlet-class>com.acceptreserve.controller.AcceptReserveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AcceptReserveServlet</servlet-name>
+		<url-pattern>/acceptreserve/acceptreserve.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReserveOrderServlet</servlet-name>
+		<servlet-class>com.reserveorder.controller.ReserveOrderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReserveOrderServlet</servlet-name>
+		<url-pattern>/reserveorder/reserveorder.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ReserveSituationServlet</servlet-name>
+		<servlet-class>com.reservesituation.controller.ReserveSituationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReserveSituationServlet</servlet-name>
+		<url-pattern>/reservesituation/reservesituation.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LatestNewsPhotoReader</servlet-name>
+		<servlet-class>com.latestnews.controller.LatestNewsPhotoReader</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LatestNewsPhotoReader</servlet-name>
+		<url-pattern>/shop/latestnewsphotoreader.do</url-pattern>
+	</servlet-mapping>
+  	
+  	<servlet>
+		<servlet-name>ProductPhotoReader</servlet-name>
+		<servlet-class>com.productphoto.controller.ProductPhotoReader</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductPhotoReader</servlet-name>
+		<url-pattern>/shop/productphotoreader.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ShopProductPhotoReader</servlet-name>
+		<servlet-class>com.productphoto.controller.ShopProductPhotoReader</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ShopProductPhotoReader</servlet-name>
+		<url-pattern>/shop/shopproductphotoreader.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderDetailPhotoReader</servlet-name>
+		<servlet-class>com.orderdetail.controller.OrderDetailPhotoReader</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderDetailPhotoReader</servlet-name>
+		<url-pattern>/shop/orderdetailphotoreader.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ProductServlet</servlet-name>
+		<servlet-class>com.product.controller.ProductServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductServlet</servlet-name>
+		<url-pattern>/shop/product.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductQAServlet</servlet-name>
+		<servlet-class>com.productqa.controller.ProductQAServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductQAServlet</servlet-name>
+		<url-pattern>/shop/productqa.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderMasterServlet</servlet-name>
+		<servlet-class>com.ordermaster.controller.OrderMasterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderMasterServlet</servlet-name>
+		<url-pattern>/shop/ordermaster.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OrderDetailServlet</servlet-name>
+		<servlet-class>com.orderdetail.controller.OrderDetailServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OrderDetailServlet</servlet-name>
+		<url-pattern>/shop/orderdetail.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ProductCategoryServlet</servlet-name>
+		<servlet-class>com.productcategory.controller.ProductCategoryServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ProductCategoryServlet</servlet-name>
+		<url-pattern>/shop/productcategory.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueTableServlet</servlet-name>
+		<servlet-class>com.queuetable.controller.QueTableServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueTableServlet</servlet-name>
+		<url-pattern>/front-store-end/queue/queueTable/queueTable.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueLineServlet</servlet-name>
+		<servlet-class>com.queueline.controller.QueLineServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueLineServlet</servlet-name>
+		<url-pattern>/front-store-end/queue/queueLine/queueLine.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QuePeriodServlet</servlet-name>
+		<servlet-class>com.queueperiod.controller.QuePeriodServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QuePeriodServlet</servlet-name>
+		<url-pattern>/front-store-end/queue/queuePeriod/queuePeriod.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueNoServlet</servlet-name>
+		<servlet-class>com.queueno.controller.QueNoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueNoServlet</servlet-name>
+		<url-pattern>/front-store-end/queue/queueNo/queueNo.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QueNoPickupServlet</servlet-name>
+		<servlet-class>com.queueno.controller.QueNoPickupServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueNoPickupServlet</servlet-name>
+		<url-pattern>/front-store-end/queue/queueNo/queueNoPickup.do</url-pattern>
+	</servlet-mapping>
+
+      <servlet>
+    <servlet-name>ProductQAServlet1</servlet-name>
+    <servlet-class>com.productqa.controller.ProductQAServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProductQAServlet1</servlet-name>
+    <url-pattern>/back-end/productqa/productqa.do</url-pattern>
+  </servlet-mapping>
+
+
+
+	<filter>
+		<filter-name>MemberLoginFilter</filter-name>
+		<filter-class>com.filter.MemberLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MemberLoginFilter</filter-name>
+		<url-pattern>/front-customer-end/member/memberPage.jsp</url-pattern>
+		<url-pattern>/front-customer-end/member/memberPageUpdate.jsp</url-pattern>
+		<url-pattern>/front-customer-end/restaurant/application.jsp</url-pattern>
+		<url-pattern>/front-store-end/restaurant/WelcomePage.jsp</url-pattern>
+		<url-pattern>/front-customer-end/foodorder/foodorder.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>ApplyFilter</filter-name>
+		<filter-class>com.filter.ApplyFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ApplyFilter</filter-name>
+		<url-pattern>/front-customer-end/restaurant/application.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>EmploginFilter</filter-name>
+		<filter-class>com.filter.EmpLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EmploginFilter</filter-name>
+		<url-pattern>/back-end/emp/EmpNoAuth.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>StoreLoginFilter</filter-name>
+		<filter-class>com.filter.StoreLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>StoreLoginFilter</filter-name>
+		<url-pattern>/front-store-end/restaurant/WelcomePage.jsp</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+		<dispatcher>ASYNC</dispatcher>
+	</filter-mapping>
+</web-app>
